@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title>
+        Gadgetmuseum Admin Panel | Add Inventory
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9cdefafb29.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    <style>
+        .btn-museum {
+            color: #2f2f2f;
+            box-shadow: 0 1px 0 0 rgba(238, 49, 156, 0.25),
+                0 -1px 0 0 rgba(250, 58, 100, 0.25),
+                1px 0 0 0 rgba(238, 49, 156, 0.25),
+                -1px 0 0 0 rgba(250, 58, 100, 0.25),
+                1px -1px 0 0 rgba(244, 53, 128, 0.5),
+                -1px 1px 0 0 rgba(244, 53, 128, 0.5),
+                1px 1px 0 0 rgba(232, 44, 184, 0.75),
+                -1px -1px 0 0 rgba(255, 62, 71, 0.75);
+            transition: .3s;
+        }
+
+        .btn-museum:hover {
+            color: #fff;
+            box-shadow: 0px 0px 0px 0px transparent;
+            background: linear-gradient(90deg, rgba(238, 49, 156, 0.788) 0%, rgba(244, 53, 129, 0.788) 35%, rgba(255, 62, 72, 0.87) 100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <h2 style="display: inline-block;box-shadow: 0px -.3em 0px #00ffd863 inset;">Add Inventory</h2>
+
+        <br>
+        <br>
+
+
+
+
+
+
+
+
+
+
+        <form action="test" method="POST" id="form1" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Project </label>
+                <input type="text" class="form-control" id="project" name="project">
+            </div>
+            <div class="form-group">
+                <label for="name">tag </label>
+                <input type="text" class="form-control" id="tag" name="tag">
+            </div>
+
+            <div class="form-group">
+                <label for="name">link </label>
+                <input type="text" class="form-control" id="link" name="link">
+            </div>
+
+            <div class="custom-file mt-3 mb-4 form-group">
+                <input type="file" class="custom-file-input" name="picturename" id="picturename">
+                <label class="custom-file-label" for="customFile">เลือกภาพที่ต้องการอัพโหลด (เลือกได้หลายภาพ)</label>
+            </div>
+
+            <div id="fileList"></div>
+            <!-- <div id="form">
+                <input v-for="item in items" v-model="item.value">
+                <button @click="addItem">add</button> {{items}}
+            </div> -->
+
+            <button type="submit" class="btn btn-outline-primary" form="form1" value="Submit">บันทึกข้อมูล</button>
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            new Vue({
+                el: '#form',
+                data: {
+                    items: [{
+                        "value": ""
+                    }],
+                },
+                methods: {
+                    addItem() {
+                        this.items.push({
+                            value: ''
+                        });
+                    }
+                }
+            })
+
+        </script>
+    </div>
+
+</body>
+
+</html>
