@@ -9,10 +9,14 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
+    <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+
+
 
 </head>
 
@@ -240,175 +244,186 @@
 
 
         <section id="page-3">
-            <div class="container mt-5">
+            <div class="container">
                 <h1 id="project" class="text-center" style="align-items: center;margin-top: 10%;"><span
                         class="pre-h1"></span>SKILLS &amp;
                     PROJECT</h1>
                 <div class="text-center"><small>All project based on HTML CSS and
-                        Javascript. (click to see my project.)</small></div>
-                <div class="row my-5">
+                        Javascript. (click to see my project.)</small>
+                </div>
 
-                    <% if(locals.project){   %>
-                   
-                   
-                        <% Object.values(project).forEach(function(project){ %>
-                          
-                        <div class="card"><a href="#" target="_blank"><img src="../uploads/<%= project.picturename %>"
-                                    class="card-img-top"></a>
-                            <div class="card-body text-center">
-                                <h5 class="card-title"><%= project.project %></h5>
-                            </div>
-                            <div class="card-footer text-center"><small
-                                    class="badge badge-pill badge-secondary mr-1"><%= project.tag[0] %></small>
-                            </div>
+                <div class="row>
+                    <% if(locals.project){ %>
+                    <% Object.values(project).forEach(function(project){ %>
+                      
+                    <div class=" col-4">
+                    <div class="card">
+                        <a href="#" target="_blank">
+                            <img src="../uploads/<%= project.picturename %>" class="card-img-top"
+                                style="height: 200px;width: 200px;">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><%= project.project %></h5>
                         </div>
-                        <% }) %>
-                        <%   }%>
-                 
-                    <div class="col-md-3 d-flex align-items-stretch mb-4">
-                        <div class="card"><a href="https://projectbase01.herokuaFpp.com/admin/users/login"
-                                target="_blank"><img src=""
-                                    class="card-img-top"></a>
-                            <div class="card-body text-center">
-                                <h5 class="card-title">ITGadgetMuseum<br> <small>(UI for
-                                        Back-end)</small>
-                                </h5>
-                            </div>
-                            <div class="card-footer text-center"><small
-                                    class="badge badge-pill badge-secondary mr-1">Node.js</small><small
-                                    class="badge badge-pill badge-secondary mr-1">Express.js</small><small
-                                    class="badge badge-pill badge-secondary mr-1">Bootstrap</small></div>
-                        </div>
-                    </div>
-                </div> <img
-                    src="https://sopoat0101.github.io/web-royal-rainmaking-project/assets/home/svg/LineArt-%E0%B8%94%E0%B8%AD%E0%B8%81%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81.svg"
-                    style="width: 20vw; position: absolute; bottom: -15em; left: -2em;">
-            </div>
-        </section>
-
-
-
-
-
-        <section class="features_area" style="margin-top: 10%;margin-bottom: 5%;" id="page-4">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <div>
-                            <h1>สิ่งที่กำลังฝึกฝน </h1>
-                            <p>
-                                ปัจจุบันผมกำลังฝึกฝนเเละกำลังพยายามเรียนรู้สิ่งใหม่ ๆอยู่เเละสิ่งเหล่านี้
-                                <br> คือสิ่งที่ผมอยากเรียกรู้เเละกำลังศึกษาอยู่ในปัจจุบันครับ
-                            </p>
+                        <div class="card-footer text-center"><small
+                                class="badge badge-pill badge-secondary mr-1"><%= project.tag[0] %></small>
                         </div>
                     </div>
                 </div>
-                <div class="row feature_inner" style="text-align: center;margin-top: 5%;">
+                <!-- end card -->
+                <% }) %>
+                <%   }%>
+            </div>
+            <!-- end col-4 -->
+    </div>
+    <!-- end row -->
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature_item">
-                            <img src="images/node.png" alt="" style="height: 150px;width: 150px;">
-                            <h4>NODEJS</h4>
-                            <p>ปัจจุบันผมกำลังฝึก node express
-                                อยู่เเละยังมีหลายส่วนที่ผมไม่เข้าใจเลยซึ่งทำให้ผมพยายามฝึกฝนมันอยู่</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature_item">
-                            <img src="images/VUE.png" alt="" style="height: 150px;width: 150px;">
-                            <h4>VUE</h4>
-                            <p>ตอนปี 2 ผมเคยฝึกเขียน VUE
-                                เเต่ตอนหลังผมลองไปเขียนอย่างอื่นซึ่งปัจจุบันผมอยากกลับมาฝึกเขียน
-                                VUE</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature_item">
-                            <img src="images/docker.png" alt="" style=" height: 150px;width: 150px;">
-                            <h4>DOCKER</h4>
-                            <p>ปัจจุบันผมยังไม่เคยได้ใช้ DOCKER เลยเเต่เวลาที่ผม deploy ผมมีปัญหาเรื่องการตั้งค่าบ่อย ๆ
-                                ทำให้อยากลองฝึกดู</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature_item">
-                            <img src="images/cloud.png" alt="" style="  height: 150px;width: 150px; ">
-                            <h4>CLOUD</h4>
-                            <p>ผมเคยได้ลองใช้ HEROKU AWS FIREBASE ซึ่งผมเวลาจะ deploy
-                                ก็จะเจอปัญหามหาศาลทำให้อยากฝึกให้คล่อง
-                            </p>
-                        </div>
-                    </div>
 
+    </div>
+
+
+    <div class="col-md-3 d-flex align-items-stretch mb-4">
+        <div class="card"><a href="https://projectbase01.herokuaFpp.com/admin/users/login" target="_blank"><img src=""
+                    class="card-img-top"></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">ITGadgetMuseum<br> <small>(UI for
+                        Back-end)</small>
+                </h5>
+            </div>
+            <div class="card-footer text-center"><small
+                    class="badge badge-pill badge-secondary mr-1">Node.js</small><small
+                    class="badge badge-pill badge-secondary mr-1">Express.js</small><small
+                    class="badge badge-pill badge-secondary mr-1">Bootstrap</small></div>
+        </div>
+    </div>
+    </div> <img
+        src="https://sopoat0101.github.io/web-royal-rainmaking-project/assets/home/svg/LineArt-%E0%B8%94%E0%B8%AD%E0%B8%81%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81.svg"
+        style="width: 20vw; position: absolute; bottom: -15em; left: -2em;">
+    </div>
+    </section>
+
+
+
+
+
+    <section class="features_area" style="margin-top: 10%;margin-bottom: 5%;" id="page-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div>
+                        <h1>สิ่งที่กำลังฝึกฝน </h1>
+                        <p>
+                            ปัจจุบันผมกำลังฝึกฝนเเละกำลังพยายามเรียนรู้สิ่งใหม่ ๆอยู่เเละสิ่งเหล่านี้
+                            <br> คือสิ่งที่ผมอยากเรียกรู้เเละกำลังศึกษาอยู่ในปัจจุบันครับ
+                        </p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="row feature_inner" style="text-align: center;margin-top: 5%;">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img src="images/node.png" alt="" style="height: 150px;width: 150px;">
+                        <h4>NODEJS</h4>
+                        <p>ปัจจุบันผมกำลังฝึก node express
+                            อยู่เเละยังมีหลายส่วนที่ผมไม่เข้าใจเลยซึ่งทำให้ผมพยายามฝึกฝนมันอยู่</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img src="images/VUE.png" alt="" style="height: 150px;width: 150px;">
+                        <h4>VUE</h4>
+                        <p>ตอนปี 2 ผมเคยฝึกเขียน VUE
+                            เเต่ตอนหลังผมลองไปเขียนอย่างอื่นซึ่งปัจจุบันผมอยากกลับมาฝึกเขียน
+                            VUE</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img src="images/docker.png" alt="" style=" height: 150px;width: 150px;">
+                        <h4>DOCKER</h4>
+                        <p>ปัจจุบันผมยังไม่เคยได้ใช้ DOCKER เลยเเต่เวลาที่ผม deploy ผมมีปัญหาเรื่องการตั้งค่าบ่อย ๆ
+                            ทำให้อยากลองฝึกดู</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature_item">
+                        <img src="images/cloud.png" alt="" style="  height: 150px;width: 150px; ">
+                        <h4>CLOUD</h4>
+                        <p>ผมเคยได้ลองใช้ HEROKU AWS FIREBASE ซึ่งผมเวลาจะ deploy
+                            ก็จะเจอปัญหามหาศาลทำให้อยากฝึกให้คล่อง
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
 
 
 
-        <section>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <div class="main_title">
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="main_title">
 
-                            <div class="passion mt-5">
-                                <img src="images/goal.jpg" class="border_circle" style="width: 200px;height: auto;">
-                                <h2 class="intro-subhead" style="margin-top: 5%;">#PASSION &amp; GOAL</h2>
-                                <p>ผมอยากจะมีความเชี่ยวชาญการทำเว็บในส่วนของ Back-end เเละอยากทำงานในทุก ๆ
-                                    วันอย่างมีความสุขครับ
-                                    นั้นคือเป้าหมายของผมครับ
-                                    <br> <br>
-                                    ทำให้ผมคิดว่าการจะทำเป้าหมายนั้นให้สำเร็จผมจำเป็นต้องศึกษาอะไรหลายๆอย่างเเละฝึกฝนเพิ่มมากยิ่งขึ้น
-                                </p>
-                            </div>
+                        <div class="passion mt-5">
+                            <img src="images/goal.jpg" class="border_circle" style="width: 200px;height: auto;">
+                            <h2 class="intro-subhead" style="margin-top: 5%;">#PASSION &amp; GOAL</h2>
+                            <p>ผมอยากจะมีความเชี่ยวชาญการทำเว็บในส่วนของ Back-end เเละอยากทำงานในทุก ๆ
+                                วันอย่างมีความสุขครับ
+                                นั้นคือเป้าหมายของผมครับ
+                                <br> <br>
+                                ทำให้ผมคิดว่าการจะทำเป้าหมายนั้นให้สำเร็จผมจำเป็นต้องศึกษาอะไรหลายๆอย่างเเละฝึกฝนเพิ่มมากยิ่งขึ้น
+                            </p>
+                        </div>
 
-                            <div class="contact my-5" id="page-5">
-                                <h2 class="intro-subhead" style="margin-top: 100px;">#CONTACT</h2>
-                                <p><svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img"
-                                        alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                        class="bi-phone b-icon bi">
-                                        <g>
-                                            <path fill-rule="evenodd"
-                                                d="M11 1H5a1 1 0 00-1 1v12a1 1 0 001 1h6a1 1 0 001-1V2a1 1 0 00-1-1zM5 0a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V2a2 2 0 00-2-2H5z"
-                                                clip-rule="evenodd"></path>
-                                            <path fill-rule="evenodd" d="M8 14a1 1 0 100-2 1 1 0 000 2z"
-                                                clip-rule="evenodd">
-                                            </path>
-                                        </g>
-                                    </svg> Phone : 090-981-8482</p>
-                                <p><svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img"
-                                        alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                        class="bi-envelope b-icon bi">
-                                        <g>
-                                            <path fill-rule="evenodd"
-                                                d="M14 3H2a1 1 0 00-1 1v8a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1zM2 2a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H2z"
-                                                clip-rule="evenodd"></path>
-                                            <path fill-rule="evenodd"
-                                                d="M.071 4.243a.5.5 0 01.686-.172L8 8.417l7.243-4.346a.5.5 0 01.514.858L8 9.583.243 4.93a.5.5 0 01-.172-.686z"
-                                                clip-rule="evenodd"></path>
-                                            <path
-                                                d="M6.752 8.932l.432-.252-.504-.864-.432.252.504.864zm-6 3.5l6-3.5-.504-.864-6 3.5.504.864zm8.496-3.5l-.432-.252.504-.864.432.252-.504.864zm6 3.5l-6-3.5.504-.864 6 3.5-.504.864z">
-                                            </path>
-                                        </g>
-                                    </svg> Email : boss003_@hotmail.com</p>
-                                <p><svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img"
-                                        alt="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                        class="bi-code-slash b-icon bi">
-                                        <g>
-                                            <path fill-rule="evenodd"
-                                                d="M4.854 4.146a.5.5 0 010 .708L1.707 8l3.147 3.146a.5.5 0 01-.708.708l-3.5-3.5a.5.5 0 010-.708l3.5-3.5a.5.5 0 01.708 0zm6.292 0a.5.5 0 000 .708L14.293 8l-3.147 3.146a.5.5 0 00.708.708l3.5-3.5a.5.5 0 000-.708l-3.5-3.5a.5.5 0 00-.708 0zm-.999-3.124a.5.5 0 01.33.625l-4 13a.5.5 0 01-.955-.294l4-13a.5.5 0 01.625-.33z"
-                                                clip-rule="evenodd"></path>
-                                        </g>
-                                    </svg> <a href="https://www.facebook.com/PrachyaPrapawat">Facebook</a>
-                                    /
-                                    <a href="">Linkedin</a>
-                                    /
-                                    <a href="https://github.com/prachyaprapawat">Github</a></p>
-                            </div>
-        </section>
+                        <div class="contact my-5" id="page-5">
+                            <h2 class="intro-subhead" style="margin-top: 100px;">#CONTACT</h2>
+                            <p><svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-phone b-icon bi">
+                                    <g>
+                                        <path fill-rule="evenodd"
+                                            d="M11 1H5a1 1 0 00-1 1v12a1 1 0 001 1h6a1 1 0 001-1V2a1 1 0 00-1-1zM5 0a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V2a2 2 0 00-2-2H5z"
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd" d="M8 14a1 1 0 100-2 1 1 0 000 2z"
+                                            clip-rule="evenodd">
+                                        </path>
+                                    </g>
+                                </svg> Phone : 090-981-8482</p>
+                            <p><svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi-envelope b-icon bi">
+                                    <g>
+                                        <path fill-rule="evenodd"
+                                            d="M14 3H2a1 1 0 00-1 1v8a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1zM2 2a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H2z"
+                                            clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M.071 4.243a.5.5 0 01.686-.172L8 8.417l7.243-4.346a.5.5 0 01.514.858L8 9.583.243 4.93a.5.5 0 01-.172-.686z"
+                                            clip-rule="evenodd"></path>
+                                        <path
+                                            d="M6.752 8.932l.432-.252-.504-.864-.432.252.504.864zm-6 3.5l6-3.5-.504-.864-6 3.5.504.864zm8.496-3.5l-.432-.252.504-.864.432.252-.504.864zm6 3.5l-6-3.5.504-.864 6 3.5-.504.864z">
+                                        </path>
+                                    </g>
+                                </svg> Email : boss003_@hotmail.com</p>
+                            <p><svg viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" alt="icon"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi-code-slash b-icon bi">
+                                    <g>
+                                        <path fill-rule="evenodd"
+                                            d="M4.854 4.146a.5.5 0 010 .708L1.707 8l3.147 3.146a.5.5 0 01-.708.708l-3.5-3.5a.5.5 0 010-.708l3.5-3.5a.5.5 0 01.708 0zm6.292 0a.5.5 0 000 .708L14.293 8l-3.147 3.146a.5.5 0 00.708.708l3.5-3.5a.5.5 0 000-.708l-3.5-3.5a.5.5 0 00-.708 0zm-.999-3.124a.5.5 0 01.33.625l-4 13a.5.5 0 01-.955-.294l4-13a.5.5 0 01.625-.33z"
+                                            clip-rule="evenodd"></path>
+                                    </g>
+                                </svg> <a href="https://www.facebook.com/PrachyaPrapawat">Facebook</a>
+                                /
+                                <a href="">Linkedin</a>
+                                /
+                                <a href="https://github.com/prachyaprapawat">Github</a></p>
+                        </div>
+    </section>
 
 
 
@@ -495,6 +510,18 @@
     </script>
 
 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+
 </body>
 
 
@@ -502,14 +529,6 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+
 
 </html>

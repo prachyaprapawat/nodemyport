@@ -29,7 +29,7 @@ router.get('/add', async (req, res, next) => {
 var _img = [];
 const storage = multer.diskStorage({
   destination: (request, file, callback) => {
-    callback(null, path.join(__dirname + '/../uploads'));
+    callback(null, path.join(__dirname + '/../public/uploads'));
   },
   filename: (request, file, callback) => {
     _img.push(file.originalname);
