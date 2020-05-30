@@ -9,8 +9,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-const PORT = process.env.PORT || '8080'
-app.set("port",PORT)
+const PORT = process.env.PORT || 3000;
+app.listen(port,()=> console.log("on port 3000"))
 
 
 
