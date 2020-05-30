@@ -9,12 +9,15 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+const PORT = process.env.PORT || '8080'
+app.set("port",PORT)
+
 
 
 // view engine setup
 app.set('views', [path.join(__dirname, 'views'),
                   path.join(__dirname, 'views/jointy-master'),]);
-                  
+
 // app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
