@@ -6,12 +6,12 @@ var Project = require('../model/project');
 
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('pang');
-  // res.send("hello")
-});
+// router.get('/', function (req, res, next) {
+//   res.render('pang');
+//   // res.send("hello")
+// });
 
-router.get('/1', function (req, res, next) {
+router.get('/', function (req, res, next) {
   Project.getPost(
     function (err, project) {
       console.log(project)
@@ -90,12 +90,6 @@ router.post('/addproject', upload.any(), function (req, res, next) {
   _img = []
 
 });
-
-
-router.get("/project/jointy", function (req,res,next) {
-  console.log("hello")
-  res.render("index3");
-})
 
 
 
