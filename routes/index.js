@@ -92,6 +92,23 @@ router.post('/addproject', upload.any(), function (req, res, next) {
 });
 
 
+router.get("/project/jointy", function (req,res,next) {
+  console.log("hello")
+  res.render("index3");
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
