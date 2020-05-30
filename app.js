@@ -9,9 +9,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-const PORT = process.env.PORT || 3000;
-app.listen(port,()=> console.log("on port 3000"))
-
+const port = process.env.PORT || 8000;
+server.listen(port, () => {
+  console.log("App is running on port " + port);
+});
 
 
 // view engine setup
