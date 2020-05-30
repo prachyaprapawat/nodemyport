@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 const port = process.env.PORT || 8000;
-server.listen(port, () => {
+app.listen(port, () => {
   console.log("App is running on port " + port);
 });
 
