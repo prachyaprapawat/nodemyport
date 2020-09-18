@@ -31,7 +31,7 @@ router.get('/', function (req, res, next) {
 });
 
 // render addproject page
-router.get('/add', async (req, res, next) => {
+router.get('/add', async function(req, res, next){
   await res.render('addproject');
 });
 
