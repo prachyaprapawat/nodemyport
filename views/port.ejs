@@ -281,11 +281,11 @@
                 <a href="/add" class="btn btn-dark btn-lg btn-block" style="text-align: center; margin-top: 1%;"
                     role="button">ADD
                     PROJECT</a>
-                <div class="row my-5">
+                <div class="row p-5">
                     <% if(locals.project){   %>
                     <% Object.values(project).forEach(function(project){ %>
 
-                    <div class="col-md-4" style="margin-bottom: 5%;">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 " style="margin-bottom: 5%;">
 
                         <div class="card"><a href="<%= project.link %>" target="_blank"><img
                                     src="../uploads/<%= project.picturename %>" class="card-img-top"></a>
@@ -534,7 +534,7 @@
 
 
 
-    <footer>Copyright © 2020. All rights reserved.</footer>
+    <footer>Copyright © 2021. All rights reserved.</footer>
 
 
 
